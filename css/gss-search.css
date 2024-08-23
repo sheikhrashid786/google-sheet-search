@@ -1,0 +1,103 @@
+/* #gss-search-results table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 10px;
+} */
+
+#gss-search-results th,
+#gss-search-results td {
+  /* border: 1px solid #fff; */
+  padding: 8px;
+}
+
+#gss-search-results th {
+  color: #48b76c;
+  text-align: left;
+}
+
+#gss-search-results td {
+  color: white;
+}
+#gss-search-results table{
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: separate; /* Important for border-radius */
+    border-spacing: 0; /* Ensures no gaps between table cells */
+    /* border-radius: 4px; Apply border-radius to the table */
+    overflow: hidden; /* This helps in clipping the table contents within the rounded corners */
+    border: none; /* Optional: Add a border to the table */
+}
+
+#gss-search-results th,#gss-search-results  td {
+    padding: 10px;
+    border: 1px solid #ccc; /* Optional: Add a border to cells */
+}
+
+#gss-search-results tr:first-child th {
+    border-top-left-radius: 4px; /* Top-left corner */
+}
+
+#gss-search-results tr:first-child  td {
+    border-top-right-radius: 4px; /* Top-right corner */
+}
+
+#gss-search-results tr:last-child th {
+    border-bottom-left-radius: 4px; /* Bottom-left corner */
+}
+
+#gss-search-results  tr:last-child td {
+    border-bottom-right-radius: 4px; /* Bottom-right corner */
+}
+/* 
+#gss-search-results tr:nth-child(even) {
+  background-color: transparent;
+} */
+
+/* #gss-search-results tr:hover {
+  background-color: #ddd;
+} */
+
+#gss-search-form {
+  max-width: 100%;
+  text-align: center;
+}
+#gss-search-form input{
+  width: 100%;
+}
+
+.bot-container {
+  position: relative;
+  width: 80px; /* Adjust the width to the size of your bot image */
+  height: 80px; /* Adjust the height to the size of your bot image */
+  overflow: visible; /* Ensures the bot can move out of the container */
+  margin: auto;
+  display: none;
+  margin-top: 50px;
+}
+
+.bot {
+  width: 100%; /* Make sure the bot image fits within the container */
+  height: auto; 
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  animation: jump-and-rotate 3s ease-in-out infinite;
+}
+
+@keyframes jump-and-rotate {
+  0% {
+    bottom: 0;
+    transform: rotateY(0deg);
+  }
+  
+  50% {
+      bottom: 20px; /* Peak of the jump */
+      transform: rotateY(720deg);
+  }
+  100% {
+      bottom: 0;
+      transform: rotateY(1440deg); /* Rotate 4 times (360 * 4) */
+  }
+}
